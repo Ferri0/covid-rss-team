@@ -1,0 +1,51 @@
+.last-update {
+  @include size(100%, 100px);
+  @include flex(column, center, center);
+  margin-bottom: $margin;
+  border: $border;
+  background-color: $colorBlockBg;
+  color: $colorTableTxt;
+  text-align: center;
+
+  // title
+  &--title {
+    font-size: $sizeCounterTitle;
+  }
+
+  // date
+  &--date {
+    font-size: $sizeCounterTitle;
+  }
+
+  &--time {
+    font-size: $sizeCounterTitle;
+  }
+
+  @media (min-width: 630px) {
+    @include size(calc(50% - 5px), 100px);
+    @include flex(column, center, center);
+    margin-right: 25%;
+    margin-left: 25%;
+  }
+
+  @media (min-width: 750px) {
+    @include size(auto, 100px);
+    margin-right: 0;
+    margin-left: 0;
+    position: absolute;
+    top: 10px;
+    left: auto;
+    border-right: none;
+    border-left: none;
+  }
+
+  @media (min-width: 1400px) and (min-height: 950px) {
+    @include size(300px, 100px);
+    margin: 0;
+    border: $border;
+    position: absolute;
+    top: auto;
+    bottom: 120px;
+    left: 10px;
+  }
+}

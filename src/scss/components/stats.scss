@@ -1,0 +1,179 @@
+/*--------------- stats block ----------------*/
+.stats {
+  @include size(100%, 500px);
+  @include flex(column, center, center);
+  transition: $transition;
+  margin-bottom: $margin;
+  border: $border;
+  position: relative;
+
+  @media (min-width: 630px) {
+    @include size(calc(50% - 5px), 470px);
+
+    &:first-child {
+      margin-right: $margin;
+    }
+
+    &:nth-child(3) {
+      margin-right: 50px;
+      margin-left: 50px;
+    }
+  }
+
+  @media (min-width: 940px) {
+    @include size(calc(33.33% - 7px), 700px);
+
+    &:first-child {
+      margin-right: $margin;
+    }
+
+    &:nth-child(2) {
+      margin-right: $margin;
+    }
+
+    &:nth-child(3) {
+      margin-right: 0px;
+      margin-left: 0px;
+    }
+  }
+
+  @media (min-width: 1400px) and (min-height: 950px) {
+    &:nth-child(1) {
+      @include size(
+        300px,
+        calc(100vh - 350px)
+      ); // 100 footer || 100 header || 50 margins || 100 update-time
+      margin-right: $margin;
+      margin-bottom: 120px;
+      order: 0;
+    }
+
+    &:nth-child(2) {
+      @include size(300px, calc(60vh - 240px));
+      margin-right: $margin;
+      order: 2;
+    }
+
+    &:nth-child(3) {
+      @include size(300px, calc(60vh - 240px));
+      order: 3;
+    }
+  }
+}
+
+/*--------------- stats counter block ----------------*/
+.stats__count {
+  @include size(100%, 100px);
+  @include flex(column, center, center);
+  text-align: center;
+  background-color: $colorBlockBg;
+  color: $colorTableTxt;
+
+  // title
+  :first-child {
+    font-size: $sizeCounterTitle;
+  }
+
+  // number
+  &--cases {
+    font-size: $sizeCounterNum;
+    color: $colorTableCasesTxt;
+  }
+
+  &--deaths {
+    font-size: $sizeCounterNum;
+    color: $colorTableDeathsTxt;
+  }
+
+  &--recovered {
+    font-size: $sizeCounterNum;
+    color: $colorTableRecoveredTxt;
+  }
+}
+
+/*--------------- stats table block ----------------*/
+.stats__table {
+  @include size(100%, calc(100% - 150px));
+
+  div {
+    overflow-x: hidden;
+    font-size: $sizeTableFont;
+  }
+
+  &--cases-column {
+    color: $colorTableCasesTxt;
+  }
+
+  &--deaths-column {
+    color: $colorTableDeathsTxt;
+  }
+
+  &--recovered-column {
+    color: $colorTableRecoveredTxt;
+  }
+}
+
+/*--------------- stats controls block ----------------*/
+/*-- this block filled by js - setTableContriols.js --*/
+.stats__controls {
+  @include size(100%, 50px);
+  @include flex(row, center, center);
+  text-align: center;
+  background-color: $colorBlockBg;
+  color: $colorTableTxt;
+
+  div {
+    font-size: $sizeTableFont;
+  }
+
+  &--left {
+    @include size(80px, 50px);
+    @include flex(column, center, center);
+    cursor: pointer;
+
+    img {
+      @include size(30px, 30px);
+      transform: rotate(180deg);
+    }
+  }
+
+  &--right {
+    @include size(80px, 50px);
+    @include flex(column, center, center);
+    cursor: pointer;
+
+    img {
+      @include size(30px, 30px);
+    }
+  }
+
+  &--disabled {
+    filter: brightness(30%);
+    cursor: default;
+  }
+
+  // block where first or second property shown
+  &--text {
+    position: relative;
+    @include size(100%, 100%);
+    @include flex(row, center, center);
+    line-height: 50px;
+    overflow: hidden;
+  }
+
+  // first prop, visible by default
+  &--first-property {
+    transition: all 0.3s linear;
+    position: absolute;
+    left: 0;
+    @include size(100%, 100%);
+  }
+
+  // second prop, hidden by default
+  &--second-property {
+    transition: all 0.3s linear;
+    position: absolute;
+    left: -100%;
+    @include size(100%, 100%);
+  }
+}

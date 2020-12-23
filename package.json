@@ -1,0 +1,64 @@
+{
+  "name": "my-webpack-project",
+  "version": "1.0.0",
+  "description": "My webpack project",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint \"./**/*.js\"",
+    "fix": "eslint --fix **/*.js --ignore-pattern node_modules/",
+    "build": "webpack --mode development",
+    "buildProd": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ferri0/covid-rss-team.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ferri0/covid-rss-team/issues"
+  },
+  "homepage": "https://github.com/Ferri0/covid-rss-team#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "@webpack-cli/init": "^1.0.3",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "copy-webpack-plugin": "7.0.0",
+    "css-loader": "^5.0.1",
+    "css-minimizer-webpack-plugin": "1.1.5",
+    "eslint": "7.15.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-node": "4.1.0",
+    "eslint-config-prettier": "7.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-prettier": "3.3.0",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "gitignore": "0.6.0",
+    "html-minimizer-webpack-plugin": "2.0.0",
+    "mini-css-extract-plugin": "1.3.3",
+    "node-sass": "^5.0.0",
+    "prettier": "2.2.1",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^5.0.3",
+    "url-loader": "4.1.1",
+    "webpack": "^5.10.1",
+    "webpack-cli": "^4.2.0"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/runtime": "^7.12.5",
+    "ag-grid-community": "^24.1.0",
+    "chart.js": "^2.9.4",
+    "geojson-world-map": "0.0.2",
+    "jsuites": "^3.9.1",
+    "leaflet": "^1.7.1"
+  }
+}

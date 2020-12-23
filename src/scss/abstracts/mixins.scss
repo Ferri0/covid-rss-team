@@ -1,0 +1,11 @@
+@mixin size($w: auto, $h: auto) {
+  width: $w;
+  height: $h;
+}
+
+@mixin flex($fd: row, $jc: center, $ai: center, $d: flex) {
+  display: $d;
+  flex-direction: $fd;
+  justify-content: $jc;
+  align-items: $ai;
+}

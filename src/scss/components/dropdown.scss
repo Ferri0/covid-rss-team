@@ -1,0 +1,47 @@
+// modify styles added by library as npm module
+// use !important to override previous values
+.jdropdown-container {
+  outline: none;
+
+  @media (min-width: 640px) {
+    width: 100% !important;
+  }
+
+  // different colors for items in dropdown
+  :nth-child(2n + 2) {
+    background-color: $colorDropdownItem !important;
+  }
+}
+
+.jdropdown-container-header {
+  background-color: $colorBlockBg !important;
+}
+
+.jdropdown-header {
+  color: $colorTableTxt !important;
+  background-color: $colorBlockBg !important;
+  border: $border !important;
+  font-size: 1rem !important;
+  padding-left: $padding !important;
+}
+
+.jdropdown-searchbar.jdropdown-focus {
+  background-color: $colorBlockBg !important;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.jdropdown-close {
+  font-size: 0.9rem !important;
+  line-height: 0.9rem !important;
+  color: $colorTableTxt !important;
+}
+
+.jdropdown-item {
+  color: $colorTableTxt !important;
+  font-size: 1.4rem !important;
+  background-color: $colorBlockBg !important;
+  border-bottom: $border !important;
+}

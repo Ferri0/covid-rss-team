@@ -1,0 +1,42 @@
+.footer {
+  @include size(100%, 100px);
+  @include flex(row, space-between, center);
+  background-color: $colorBlockBg;
+  border: $border;
+  padding: $padding;
+  font-size: $sizeTableFont;
+  color: $colorTableTxt;
+}
+
+.footer__rss-logo {
+  filter: invert(1);
+  height: 50px;
+
+  @media (max-width: 420px) {
+    height: 35px;
+  }
+}
+
+.footer__created-by {
+  @include flex(column, center, flex-start);
+  line-height: 1.8rem;
+
+  & a {
+    cursor: pointer;
+    text-decoration: underline;
+
+    &:hover {
+      color: #c4c4c4;
+      transform: scale(1.02);
+    }
+  }
+
+  @media (max-width: 420px) {
+    font-size: 1rem;
+    line-height: 1.3rem;
+  }
+}
+
+.footer__rss-logo:hover {
+  transform: scale(1.02);
+}
