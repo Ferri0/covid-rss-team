@@ -1,6 +1,6 @@
 /*--------------- stats block ----------------*/
 .stats {
-  @include size(100%, 500px);
+  @include size(100%, 50rem);
   @include flex(column, center, center);
   transition: $transition;
   margin-bottom: $margin;
@@ -8,20 +8,20 @@
   position: relative;
 
   @media (min-width: 630px) {
-    @include size(calc(50% - 5px), 470px);
+    @include size(calc(50% - 0.5rem), 47rem);
 
     &:first-child {
       margin-right: $margin;
     }
 
     &:nth-child(3) {
-      margin-right: 50px;
-      margin-left: 50px;
+      margin-right: 5rem;
+      margin-left: 5rem;
     }
   }
 
   @media (min-width: 940px) {
-    @include size(calc(33.33% - 7px), 700px);
+    @include size(calc(33.33% - 0.7rem), 70rem);
 
     &:first-child {
       margin-right: $margin;
@@ -37,25 +37,25 @@
     }
   }
 
-  @media (min-width: 1400px) and (min-height: 950px) {
+  @media (min-width: 1000px) {
     &:nth-child(1) {
       @include size(
-        300px,
-        calc(100vh - 350px)
+        30rem,
+        calc(100vh - 35rem)
       ); // 100 footer || 100 header || 50 margins || 100 update-time
       margin-right: $margin;
-      margin-bottom: 120px;
+      margin-bottom: 12rem;
       order: 0;
     }
 
     &:nth-child(2) {
-      @include size(300px, calc(60vh - 240px));
+      @include size(30rem, calc(65vh - 24rem));
       margin-right: $margin;
       order: 2;
     }
 
     &:nth-child(3) {
-      @include size(300px, calc(60vh - 240px));
+      @include size(30rem, calc(65vh - 24rem));
       order: 3;
     }
   }
@@ -63,7 +63,7 @@
 
 /*--------------- stats counter block ----------------*/
 .stats__count {
-  @include size(100%, 100px);
+  @include size(100%, 7rem);
   @include flex(column, center, center);
   text-align: center;
   background-color: $colorBlockBg;
@@ -93,30 +93,47 @@
 
 /*--------------- stats table block ----------------*/
 .stats__table {
-  @include size(100%, calc(100% - 150px));
+  @include size(100%, calc(100% - 12rem));
 
   div {
     overflow-x: hidden;
-    font-size: $sizeTableFont;
+    font-size: 16px;
+    line-height: 30px !important;
   }
 
   &--cases-column {
     color: $colorTableCasesTxt;
+    padding-left: 5px !important;
   }
 
   &--deaths-column {
     color: $colorTableDeathsTxt;
+    padding-left: 5px !important;
   }
 
   &--recovered-column {
     color: $colorTableRecoveredTxt;
+    padding-left: 5px !important;
+  }
+
+  &--flag {
+    @include size(3rem, 1.5rem);
+    margin-left: -2rem !important;
+  }
+
+  &--countries-column {
+    padding-left: 5px !important;
+  }
+
+  .ag-header-cell {
+    padding-left: 5px !important;
   }
 }
 
 /*--------------- stats controls block ----------------*/
 /*-- this block filled by js - setTableContriols.js --*/
 .stats__controls {
-  @include size(100%, 50px);
+  @include size(100%, 5rem);
   @include flex(row, center, center);
   text-align: center;
   background-color: $colorBlockBg;
@@ -127,23 +144,23 @@
   }
 
   &--left {
-    @include size(80px, 50px);
+    @include size(8rem, 5rem);
     @include flex(column, center, center);
     cursor: pointer;
 
     img {
-      @include size(30px, 30px);
+      @include size(3rem, 3rem);
       transform: rotate(180deg);
     }
   }
 
   &--right {
-    @include size(80px, 50px);
+    @include size(8rem, 5rem);
     @include flex(column, center, center);
     cursor: pointer;
 
     img {
-      @include size(30px, 30px);
+      @include size(3rem, 3rem);
     }
   }
 
@@ -157,7 +174,7 @@
     position: relative;
     @include size(100%, 100%);
     @include flex(row, center, center);
-    line-height: 50px;
+    line-height: 5rem;
     overflow: hidden;
   }
 

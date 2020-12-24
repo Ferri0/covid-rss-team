@@ -18,10 +18,11 @@
 }
 
 .jdropdown-header {
+  height: 3rem;
   color: $colorTableTxt !important;
   background-color: $colorBlockBg !important;
   border: $border !important;
-  font-size: 1rem !important;
+  font-size: 2.25rem !important;
   padding-left: $padding !important;
 }
 
@@ -34,14 +35,14 @@
 }
 
 .jdropdown-close {
-  font-size: 0.9rem !important;
-  line-height: 0.9rem !important;
+  font-size: 1.35rem !important;
+  line-height: 1.35rem !important;
   color: $colorTableTxt !important;
 }
 
 .jdropdown-item {
   color: $colorTableTxt !important;
-  font-size: 1.4rem !important;
+  font-size: 2.1rem !important;
   background-color: $colorBlockBg !important;
   border-bottom: $border !important;
 }

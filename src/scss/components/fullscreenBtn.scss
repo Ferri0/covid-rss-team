@@ -1,12 +1,12 @@
 .fullscreen-btn {
-  @include size(20px, 20px);
+  @include size(2rem, 2rem);
   z-index: 5; // z-index to show over the table
   background-color: $colorBlockBg;
   border: $border;
   border-radius: 50%;
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 0.5rem;
+  right: 0.5rem;
   background-image: url("../../assets/img/fullscreen-off.svg");
   background-position: center;
   background-repeat: no-repeat;

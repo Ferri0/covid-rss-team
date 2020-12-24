@@ -15,7 +15,7 @@ export default function () {
     e.population = temp.population;
     const flag = document.createElement("img");
     flag.src = temp.flag;
-    flag.style.width = "30px";
+    flag.classList.add("stats__table--flag");
     e.flag = flag;
     return e;
   });

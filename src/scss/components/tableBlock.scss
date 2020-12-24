@@ -1,12 +1,12 @@
 /*--------------- stats block ----------------*/
 .stats {
-  @include size(310px, 700px);
+  @include size(31rem, 70rem);
   @include flex(column, center, center);
 }
 
 /*--------------- stats counter block ----------------*/
 .stats__count {
-  @include size(100%, 100px);
+  @include size(100%, 10rem);
   @include flex(column, center, center);
   text-align: center;
   background-color: $colorTableBg;
@@ -36,7 +36,7 @@
 
 /*--------------- stats table block ----------------*/
 .stats__table {
-  @include size(100%, 555px);
+  @include size(100%, 55.5rem);
 
   div {
     font-size: $sizeTableFont;
@@ -58,30 +58,30 @@
 /*--------------- stats controls block ----------------*/
 /*-- this block builded by js - setTableContriols.js --*/
 .stats__controls {
-  @include size(100%, 50px);
+  @include size(100%, 5rem);
   @include flex(row, center, center);
   text-align: center;
   background-color: $colorTableBg;
   color: $colorTableTxt;
 
   &--left {
-    @include size(80px, 50px);
+    @include size(8rem, 5rem);
     @include flex(column, center, center);
     cursor: pointer;
 
     img {
-      @include size(30px, 30px);
+      @include size(3rem, 3rem);
       transform: rotate(180deg);
     }
   }
 
   &--right {
-    @include size(80px, 50px);
+    @include size(8rem, 5rem);
     @include flex(column, center, center);
     cursor: pointer;
 
     img {
-      @include size(30px, 30px);
+      @include size(3rem, 3rem);
     }
   }
 
@@ -95,7 +95,7 @@
     position: relative;
     @include size(100%, 100%);
     @include flex(row, center, center);
-    line-height: 50px;
+    line-height: 5rem;
     overflow: hidden;
   }
 

@@ -17,7 +17,7 @@ import viewMap from "./components/map";
 import setApiDataRelative from "./utility/setApiDataRelative";
 
 // callback function as arg to set default page after fetches completed
-getApiData(updateData, viewMap, setDropdowns, setApiDataRelative);
+getApiData(setApiDataRelative, updateData, viewMap, setDropdowns);
 
 // display and set up controls for each of three tables
 setTableControls("casesTable");

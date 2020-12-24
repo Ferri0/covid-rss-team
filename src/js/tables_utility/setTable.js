@@ -12,11 +12,21 @@ export default function (tableClass) {
   // first column same for all tables
   const columnDefs = [
     {
+      cellRenderer: function (params) {
+        return params.value;
+      },
+      headerName: "",
+      field: "flag",
+      sortable: false,
+      lockPosition: true,
+      flex: 0.2,
+    },
+    {
       headerName: "Country",
       field: "Country",
       sortable: true,
       lockPosition: true,
-      flex: 1,
+      flex: 1.4,
     },
   ];
 
@@ -26,9 +36,9 @@ export default function (tableClass) {
   if (properties[`${tableClass}Table`].units !== "absolute") {
     // set empty tables if selected country
     if (properties.region !== "World") {
-      columnDefs[0].field = "----";
-      columnDefs[0].headerName = "----";
-      columnDefs[0].sortable = false;
+      columnDefs[1].field = "----";
+      columnDefs[1].headerName = "----";
+      columnDefs[1].sortable = false;
       columnDefs.push({
         headerName: "----",
         field: "----",
@@ -51,7 +61,8 @@ export default function (tableClass) {
         lockPosition: true,
         flex: 1,
       });
-      columnDefs[1].cellClass = "stats__table--cases-column";
+      columnDefs[1].cellClass = "stats__table--countries-column";
+      columnDefs[2].cellClass = "stats__table--cases-column";
       eGridDiv = document.querySelector(".stats__table--cases");
       rowData = properties.apiDataRelative;
     }
@@ -67,7 +78,8 @@ export default function (tableClass) {
         lockPosition: true,
         flex: 1,
       });
-      columnDefs[1].cellClass = "stats__table--deaths-column";
+      columnDefs[1].cellClass = "stats__table--countries-column";
+      columnDefs[2].cellClass = "stats__table--deaths-column";
       eGridDiv = document.querySelector(".stats__table--deaths");
       rowData = properties.apiDataRelative;
     }
@@ -83,7 +95,8 @@ export default function (tableClass) {
         lockPosition: true,
         flex: 1,
       });
-      columnDefs[1].cellClass = "stats__table--recovered-column";
+      columnDefs[1].cellClass = "stats__table--countries-column";
+      columnDefs[2].cellClass = "stats__table--recovered-column";
       eGridDiv = document.querySelector(".stats__table--recovered");
       rowData = properties.apiDataRelative;
     }
@@ -120,9 +133,10 @@ export default function (tableClass) {
         lockPosition: true,
         flex: 1,
       });
-      columnDefs[1].cellClass = "stats__table--cases-column";
+      columnDefs[1].cellClass = "stats__table--countries-column";
+      columnDefs[2].cellClass = "stats__table--cases-column";
       eGridDiv = document.querySelector(".stats__table--cases");
-      rowData = properties.apiData.Countries;
+      rowData = properties.apiDataRelative;
     }
 
     // set deaths table
@@ -136,9 +150,10 @@ export default function (tableClass) {
         lockPosition: true,
         flex: 1,
       });
-      columnDefs[1].cellClass = "stats__table--deaths-column";
+      columnDefs[1].cellClass = "stats__table--countries-column";
+      columnDefs[2].cellClass = "stats__table--deaths-column";
       eGridDiv = document.querySelector(".stats__table--deaths");
-      rowData = properties.apiData.Countries;
+      rowData = properties.apiDataRelative;
     }
 
     // set recovered table
@@ -152,9 +167,10 @@ export default function (tableClass) {
         lockPosition: true,
         flex: 1,
       });
-      columnDefs[1].cellClass = "stats__table--recovered-column";
+      columnDefs[1].cellClass = "stats__table--countries-column";
+      columnDefs[2].cellClass = "stats__table--recovered-column";
       eGridDiv = document.querySelector(".stats__table--recovered");
-      rowData = properties.apiData.Countries;
+      rowData = properties.apiDataRelative;
     }
 
     // throw error on wrong argument
@@ -165,6 +181,8 @@ export default function (tableClass) {
 
   // let the grid know which columns and what data to use
   const gridOptions = {
+    headerHeight: 30,
+    rowHeight: 30,
     columnDefs: columnDefs,
     rowData: rowData,
   };

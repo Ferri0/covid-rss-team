@@ -12,6 +12,7 @@ export default function (stateControls, region, period) {
   const arrDates = []; // axis x
   const arrTotalDeaths = [];
   const arrTotalRecovered = [];
+  let color;
   let title;
   let chartConfig = {};
 
@@ -39,15 +40,19 @@ export default function (stateControls, region, period) {
           if (stateControls === "cases" && region === "World") {
             state = arrTotalCases;
             title = "total cases summary ";
+            color = 'rgba(255, 211, 0, 0.8)';
           } else if (stateControls === "deaths" && region === "World") {
             state = arrTotalDeaths;
             title = "total death summary";
+            color = 'rgba(124, 10, 10, 0.8)';
           } else if (stateControls === "recovered" && region === "World") {
             state = arrTotalRecovered;
             title = "total recovered summary";
+            color = 'rgba(57, 137, 48, 0.8)';
           } else if (stateControls === undefined && region === undefined) {
             state = arrTotalCases;
             title = "total cases summary";
+            color = 'rgba(255, 211, 0, 0.8)';
           }
 
           chartConfig = {
@@ -58,7 +63,7 @@ export default function (stateControls, region, period) {
                 {
                   label: "",
                   data: state, // axis y
-                  backgroundColor: ["rgba(255, 211, 0, 0.8)"],
+                  backgroundColor: [color],
                 },
               ],
             },
@@ -107,15 +112,20 @@ export default function (stateControls, region, period) {
           if (stateControls === "cases") {
             state = arrTotalCases;
             title = `total cases ${region} summary`;
+            color = 'rgba(255, 211, 0, 0.8)';
           } else if (stateControls === "deaths") {
             state = arrTotalDeaths;
             title = `total deaths ${region} summary`;
+            color = 'rgba(124, 10, 10, 0.8)';
           } else if (stateControls === "recovered") {
             state = arrTotalRecovered;
             title = `total recovered ${region} summary`;
+            color = 'rgba(57, 137, 48, 0.8)';
           } else if (stateControls === undefined) {
             state = arrTotalCases;
             title = `total cases ${region} summary`;
+            color = 'rgba(255, 211, 0, 0.8)';
+
           }
 
           chartConfig = {
@@ -126,7 +136,7 @@ export default function (stateControls, region, period) {
                 {
                   label: "",
                   data: state, // axis y
-                  backgroundColor: ["rgba(255, 211, 0, 0.8)"],
+                  backgroundColor: [color],
                 },
               ],
             },
@@ -185,15 +195,19 @@ export default function (stateControls, region, period) {
           if (stateControls === "cases" && region === "World") {
             state = arrTotalCases;
             title = "total historical daily cases ";
+            color = 'rgba(255, 211, 0, 0.8)';
           } else if (stateControls === "deaths" && region === "World") {
             state = arrTotalDeaths;
             title = "total historical daily death";
+            color = 'rgba(124, 10, 10, 0.8)';
           } else if (stateControls === "recovered" && region === "World") {
             state = arrTotalRecovered;
             title = "total historical daily recovered";
+            color = 'rgba(57, 137, 48, 0.8)';
           } else if (stateControls === undefined && region === undefined) {
             state = arrTotalCases;
             title = "total historical daily cases";
+            color = 'rgba(255, 211, 0, 0.8)';
           }
 
           chartConfig = {
@@ -204,7 +218,7 @@ export default function (stateControls, region, period) {
                 {
                   label: "",
                   data: state, // axis y
-                  backgroundColor: ["rgba(255, 211, 0, 0.8)"],
+                  backgroundColor: [color],
                 },
               ],
             },
@@ -273,15 +287,19 @@ export default function (stateControls, region, period) {
           if (stateControls === "cases") {
             state = arrTotalCases;
             title = `historical daily cases ${region}`;
+            color = 'rgba(255, 211, 0, 0.8)'
           } else if (stateControls === "deaths") {
             state = arrTotalDeaths;
             title = `historical daily deaths ${region}`;
+            color = 'rgba(124, 10, 10, 0.8)'
           } else if (stateControls === "recovered") {
             state = arrTotalRecovered;
             title = `historical daily recovered ${region}`;
+            color = 'rgba(57, 137, 48, 0.8)'
           } else if (stateControls === undefined) {
             state = arrTotalCases;
             title = `historical daily cases ${region}`;
+            color = 'rgba(255, 211, 0, 0.8)'
           }
 
           chartConfig = {
@@ -292,7 +310,7 @@ export default function (stateControls, region, period) {
                 {
                   label: "",
                   data: state, // axis y
-                  backgroundColor: ["rgba(255, 211, 0, 0.8)"],
+                  backgroundColor: [color],
                 },
               ],
             },
