@@ -9,7 +9,7 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 module.exports = {
   mode: "development",
   entry: "./src/js/app.js",
-  devtool: "source-map",
+  // devtool: "source-map",
   watch: true,
 
   output: {

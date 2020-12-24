@@ -35,8 +35,8 @@ export default function () {
       firstProp.style.left = "+100%";
       thirdProp.style.left = "-100%";
     }
-
-    chart(properties.graphDisplay, properties.region, properties.period); // update chart
+    let stateValue = document.querySelector(`#dropdownChart`).value;
+    chart(properties.graphDisplay, properties.region, properties.period, stateValue); // update chart
   });
 
   rightButton.addEventListener("click", () => {
@@ -60,6 +60,8 @@ export default function () {
       firstProp.style.left = "+200%";
     }
 
-    chart(properties.graphDisplay, properties.region, properties.period); // update chart
+    let stateValue = document.querySelector(`#dropdownChart`).value;
+
+    chart(properties.graphDisplay, properties.region, properties.period, stateValue); // update chart
   });
 }

@@ -36,9 +36,9 @@ export default function (tableClass) {
   if (properties[`${tableClass}Table`].units !== "absolute") {
     // set empty tables if selected country
     if (properties.region !== "World") {
-      columnDefs[1].field = "----";
-      columnDefs[1].headerName = "----";
-      columnDefs[1].sortable = false;
+      columnDefs[0].field = "----";
+      columnDefs[0].headerName = "----";
+      columnDefs[0].sortable = false;
       columnDefs.push({
         headerName: "----",
         field: "----",
